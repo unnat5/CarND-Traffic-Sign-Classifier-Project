@@ -1,6 +1,4 @@
-## Project: Build a Traffic Sign Recognition Program
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-
+# Traffic Sign Recognition
 
 ### Goals
 - Load dataset
@@ -25,7 +23,7 @@ I used the pandas library to calculate summary statistic of the traffic signs da
 
 - And in the above dataset we have different frequency for each class and some classes are less sampled as compared to other, so will have difficulties in prediciting them correctly by our model.
 
-<img src = "readmeFig/label_frequency.jpg">
+<img src = "readmeFig/label_frequency.jpg" height="350" width = "350">
 
 
 ## Design and Test a Model Architecture
@@ -111,6 +109,14 @@ epochs = 10
 4. So out of 6 images my model predicted 5 of them correctly. And one was incorrectly classified and Roundabout sign was misclassiified.
 5. So accuracy of our model on these images are 83.33%
 
+### Let's take an example
+<img src = "readmeFig/test_analysis.jpg">
+
+- It's not classifying the image correctly, output prediction should be 'Roundabout mandatory'.
+- So, in the above picture its quite clear there are multiple building in the background unlike our dataset.
+- Image taken is at different angle if we compare it with our training dataset. We could overcome this by introducing image augmentation in our training dataset.
+- And it's contrast and brightness is different as compared to the training dataset, but we overcome that with image pre-processing.
+- And if we look at our confusion matrix too our model is not doing great at classifying "Roundabout mandatory" road sign.
 
 ## Visualizing the Neural Network.
 #### Visualizing the Residual block 1.
@@ -124,4 +130,4 @@ epochs = 10
 ### Future work
 - I think to improve the model performance I can work on image augmentation and hope the performance improves.
 - Secondly some classes are under sampled and we can collect more images of them.
-- And at last we could use transfer learning and utilize the pretrained weights from network like Resnet32 and etc.
+- And at last we could use transfer learning and utilize the pretrained weights from network like Resnet34 and etc.
