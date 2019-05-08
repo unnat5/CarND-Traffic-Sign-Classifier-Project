@@ -23,7 +23,7 @@ I used the pandas library to calculate summary statistic of the traffic signs da
 
 - And in the above dataset we have different frequency for each class and some classes are less sampled as compared to other, so will have difficulties in prediciting them correctly by our model.
 
-<img src = "readmeFig/label_frequency.jpg" height="350" width = "350">
+<img src = "readmeFig/label_frequency.jpg">
 
 
 ## Design and Test a Model Architecture
